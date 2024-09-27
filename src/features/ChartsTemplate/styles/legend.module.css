@@ -1,0 +1,37 @@
+.list {
+	margin: 0 0 0 12px;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+.item {
+	width: 100%;
+	margin: 0 0 12px;
+	display: flex;
+	align-items: center;
+}
+
+.item:last-of-type {
+	margin: 0;
+}
+
+.round {
+	margin: 0 4px 0 0;
+	width: 12px;
+	height: 12px;
+	background-color: var(--slider-color);
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.text {
+	margin: 2px 0 0;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.15;
+	color: var(--main-black-color);
+}

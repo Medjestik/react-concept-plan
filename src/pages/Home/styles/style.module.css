@@ -1,0 +1,29 @@
+.container {
+	margin: 0;
+	width: 100%;
+	min-height: calc(100vh - 96px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	margin: 0;
+	font-size: 56px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.15;
+	text-align: center;
+	color: var(--accent-blue-color);
+}
+
+.subtitle {
+	margin: 12px 0 0;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.15;
+	text-align: center;
+	color: var(--main-black-color);
+}
