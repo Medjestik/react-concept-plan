@@ -2,3 +2,172 @@
 	margin: 0;
 	width: 100%;
 }
+
+.title {
+	margin: 0 0 12px;
+	color: var(--main-black-color);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.15;
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.item {
+	margin: 0;
+	padding: 20px 20px 24px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	border-radius: 12px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+}
+
+.item_color_blue {
+	background-color: var(--accent-blue-light-color);
+}
+
+.item_color_blue:hover {
+	cursor: pointer;
+	background-color: var(--accent-blue-color);
+}
+
+.item_color_orange {
+	background-color: var(--accent-orange-light-color);
+}
+
+.item_color_orange:hover {
+	cursor: pointer;
+	background-color: var(--accent-orange-color);
+}
+
+.item_color_green {
+	background-color: var(--accent-green-light-color);
+}
+
+.item_color_green:hover {
+	cursor: pointer;
+	background-color: var(--accent-green-color);
+}
+
+.count {
+	position: absolute;
+	bottom: -40px;
+	right: 12px;
+	color: rgba(255 255 255 / 80%);
+	font-size: 216px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	transition: all 0.3s ease-in-out;
+}
+
+.item:hover .count {
+	color: rgba(255 255 255 / 40%);
+}
+
+.icon_container {
+	margin: 0 0 16px;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--main-white-color);
+	border-radius: 50%;
+}
+
+.icon {
+	margin: 0;
+	width: 30px;
+	height: 30px;
+}
+
+.icon_type_strategy {
+	background-image: url('../../../shared/icons/product/strategy.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon_type_social {
+	background-image: url('../../../shared/icons/product/social.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon_type_report {
+	background-image: url('../../../shared/icons/product/report.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon_type_politic {
+	background-image: url('../../../shared/icons/product/politic.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon_type_energy {
+	background-image: url('../../../shared/icons/product/energy.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon_type_ecology {
+	background-image: url('../../../shared/icons/product/ecology.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.icon_type_certificate {
+	background-image: url('../../../shared/icons/product/certificate.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.name {
+	margin: 0 0 24px;
+	color: var(--main-black-color);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.15;
+	transition: all 0.3s ease-in-out;
+	z-index: 2;
+}
+
+.item:hover .name {
+	color: var(--main-white-color);
+}
+
+.nsi {
+	color: var(--main-black-color);
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.15;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+	z-index: 2;
+}
+
+.item:hover .nsi {
+	color: var(--main-white-color);
+}

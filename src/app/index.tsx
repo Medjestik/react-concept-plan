@@ -6,6 +6,8 @@ import { Menu } from '../widgets/Menu/ui/Menu';
 import { Home } from '../pages/Home/ui/Home';
 import { Reconstruction } from '../pages/Reconstruction/ui/Reconstruction';
 import { MarketAnalyze } from '../pages/MarketAnalyze/ui/MarketAnalyze';
+import { Product } from '../pages/Product/ui/Product';
+import { Discipline } from '../pages/Discipline/ui/Discipline';
 
 import styles from './app.module.scss';
 
@@ -22,18 +24,12 @@ export const App = () => {
 							element={<div>Термины и определения</div>}
 						/>
 						<Route path={EROUTESPATH.ANALYZE} element={<MarketAnalyze />} />
-						<Route
-							path={EROUTESPATH.PRODUCT}
-							element={<div>Список продуктов</div>}
-						/>
+						<Route path={EROUTESPATH.PRODUCT} element={<Product />} />
 						<Route
 							path={EROUTESPATH.RECONSTRUCTION}
 							element={<Reconstruction />}
 						/>
-						<Route
-							path={EROUTESPATH.DISCIPLINEQUAL}
-							element={<div>Проектирование ПД</div>}
-						/>
+						<Route path={EROUTESPATH.DISCIPLINEQUAL} element={<Discipline />} />
 						<Route
 							path={EROUTESPATH.DISCIPLINEMAIN}
 							element={<div>Проектирование ОПД</div>}
@@ -50,6 +46,7 @@ export const App = () => {
 					</Routes>
 				</div>
 			</main>
+			<div id='modal-root'></div>
 		</div>
 	);
 };
