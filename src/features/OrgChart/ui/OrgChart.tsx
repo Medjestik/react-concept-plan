@@ -1,8 +1,7 @@
 import type { FC } from 'react';
+import type { IOrgChartProps } from '../types/types';
 
 import { useState } from 'react';
-
-import { disciplineNodes } from '../mock/mock';
 
 import { Modal } from '../../../shared/components/Modal/ui/Modal';
 import { Tabs } from '../../../shared/components/Tabs/ui/Tabs';
@@ -10,7 +9,7 @@ import { TextTemplate } from '../../../features/TextTemplate/ui/TextTemplate';
 
 import { Tree } from './Tree';
 
-export const OrgChart: FC = () => {
+export const OrgChart: FC<IOrgChartProps> = ({ nodes }) => {
 	const [currentNode, setCurrentNode] = useState<any | null>(null);
 
 	const handleNodeClick = (node: unknown) => {
@@ -45,6 +44,14 @@ export const OrgChart: FC = () => {
 						label: 'Описание процесса',
 						content: <TextTemplate text={node.description || ''} />,
 					},
+					{
+						label: 'Результат деятельности',
+						content: <TextTemplate text={node.result || ''} />,
+					},
+					{
+						label: 'Нормативные документы',
+						content: <TextTemplate text={node.nsis || ''} />,
+					},
 				];
 
 			case 'discipline':
@@ -52,6 +59,10 @@ export const OrgChart: FC = () => {
 					{
 						label: 'Описание дисциплины',
 						content: <TextTemplate text={node.description || ''} />,
+					},
+					{
+						label: 'Практическое задание',
+						content: <TextTemplate text={node.practice || ''} />,
 					},
 				];
 
@@ -65,9 +76,15 @@ export const OrgChart: FC = () => {
 		}
 	};
 	return (
-		<>
-			<div style={{ height: '100%' }}>
-				<Tree onClickNode={handleNodeClick} nodes={disciplineNodes} />
+		<div className='org-chart'>
+			<div className='tree-container' style={{ height: '100%' }}>
+				<Tree
+					onClickNode={handleNodeClick}
+					nodes={nodes.map((elem) => ({
+						...elem,
+						tags: [elem.type],
+					}))}
+				/>
 			</div>
 			{currentNode && (
 				<Modal
@@ -77,6 +94,6 @@ export const OrgChart: FC = () => {
 					<Tabs tabs={renderTabs(currentNode)} />
 				</Modal>
 			)}
-		</>
+		</div>
 	);
 };

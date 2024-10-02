@@ -8,7 +8,6 @@ import { Reconstruction } from '../pages/Reconstruction/ui/Reconstruction';
 import { MarketAnalyze } from '../pages/MarketAnalyze/ui/MarketAnalyze';
 import { Product } from '../pages/Product/ui/Product';
 import { Discipline } from '../pages/Discipline/ui/Discipline';
-import { OrgChart } from '../pages/OrgChart/ui/OrgChart';
 
 import styles from './app.module.scss';
 
@@ -31,7 +30,10 @@ export const App = () => {
 							element={<Reconstruction />}
 						/>
 						<Route path={EROUTESPATH.DISCIPLINEQUAL} element={<Discipline />} />
-						<Route path={EROUTESPATH.DISCIPLINEMAIN} element={<OrgChart />} />
+						<Route
+							path={EROUTESPATH.DISCIPLINEMAIN}
+							element={<div>Проектирование ОПД</div>}
+						/>
 						<Route
 							path={EROUTESPATH.GRADUATE}
 							element={<div>ПК выпускника</div>}
