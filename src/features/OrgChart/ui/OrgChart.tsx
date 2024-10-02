@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import type { IOrgChartProps } from '../types/types';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 import { Modal } from '../../../shared/components/Modal/ui/Modal';
 import { Tabs } from '../../../shared/components/Tabs/ui/Tabs';
@@ -75,16 +75,24 @@ export const OrgChart: FC<IOrgChartProps> = ({ nodes }) => {
 				];
 		}
 	};
+
+	const memoizedTree = useMemo(
+		() => (
+			<Tree
+				onClickNode={handleNodeClick}
+				nodes={nodes.map((elem) => ({
+					...elem,
+					tags: [elem.type],
+				}))}
+			/>
+		),
+		[nodes]
+	);
+
 	return (
 		<div className='org-chart'>
 			<div className='tree-container' style={{ height: '100%' }}>
-				<Tree
-					onClickNode={handleNodeClick}
-					nodes={nodes.map((elem) => ({
-						...elem,
-						tags: [elem.type],
-					}))}
-				/>
+				{memoizedTree}
 			</div>
 			{currentNode && (
 				<Modal
