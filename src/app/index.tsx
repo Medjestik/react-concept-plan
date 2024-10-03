@@ -8,6 +8,8 @@ import { Reconstruction } from '../pages/Reconstruction/ui/Reconstruction';
 import { MarketAnalyze } from '../pages/MarketAnalyze/ui/MarketAnalyze';
 import { Product } from '../pages/Product/ui/Product';
 import { Discipline } from '../pages/Discipline/ui/Discipline';
+import { DisciplineMain } from '../pages/DisciplineMain/ui/DisciplineMain';
+import { Plan } from '../pages/Plan/ui/Plan';
 
 import styles from './app.module.scss';
 
@@ -19,10 +21,6 @@ export const App = () => {
 				<div className={styles.container}>
 					<Routes>
 						<Route path={EROUTESPATH.HOME} element={<Home />} />
-						<Route
-							path={EROUTESPATH.TERM}
-							element={<div>Термины и определения</div>}
-						/>
 						<Route path={EROUTESPATH.ANALYZE} element={<MarketAnalyze />} />
 						<Route path={EROUTESPATH.PRODUCT} element={<Product />} />
 						<Route
@@ -32,13 +30,9 @@ export const App = () => {
 						<Route path={EROUTESPATH.DISCIPLINEQUAL} element={<Discipline />} />
 						<Route
 							path={EROUTESPATH.DISCIPLINEMAIN}
-							element={<div>Проектирование ОПД</div>}
+							element={<DisciplineMain />}
 						/>
-						<Route
-							path={EROUTESPATH.GRADUATE}
-							element={<div>ПК выпускника</div>}
-						/>
-						<Route path={EROUTESPATH.PLAN} element={<div>Учебный план</div>} />
+						<Route path={EROUTESPATH.PLAN} element={<Plan />} />
 						<Route
 							path={EROUTESPATH.ANNOTATION}
 							element={<div>Аннотация</div>}

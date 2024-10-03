@@ -2,7 +2,7 @@ export const products = [
 	{
 		id: 1,
 		title: 'Политика транспортной компании в области устойчивого развития',
-		color: 'blue',
+		color: 'dark',
 		icon: 'politic',
 		nsi: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
 		stages: [
@@ -667,7 +667,7 @@ export const products = [
 	{
 		id: 2,
 		title: 'Программы корпоративной социальной ответственности (КСО)',
-		color: 'orange',
+		color: 'normal',
 		icon: 'social',
 		nsi: [15, 16, 17, 18, 19, 20, 21, 22],
 		stages: [
@@ -817,35 +817,35 @@ export const products = [
 	{
 		id: 3,
 		title: 'Экологическая стратегия транспортной компании',
-		color: 'green',
+		color: 'light',
 		icon: 'ecology',
 		nsi: [23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37],
 	},
 	{
 		id: 4,
 		title: 'Энергетическая стратегия транспортной компании',
-		color: 'orange',
+		color: 'light',
 		icon: 'energy',
 		nsi: [38, 39, 40, 41, 42, 43, 44],
 	},
 	{
 		id: 5,
 		title: 'Стратегия климатического перехода транспортной компании',
-		color: 'green',
+		color: 'dark',
 		icon: 'strategy',
 		nsi: [45, 46, 47, 48, 49],
 	},
 	{
 		id: 6,
 		title: 'Отчётность по устойчивому развитию ',
-		color: 'blue',
+		color: 'normal',
 		icon: 'report',
 		nsi: [50, 51, 52, 53, 54, 55, 56, 57, 58],
 	},
 	{
 		id: 7,
 		title: 'Сертификат Системы экологического менеджмента (СЭМ)',
-		color: 'green',
+		color: 'dark',
 		icon: 'certificate',
 		nsi: [35],
 	},

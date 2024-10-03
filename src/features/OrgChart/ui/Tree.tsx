@@ -7,18 +7,18 @@ import OrgChart from '@balkangraph/orgchart.js';
 import '../styles/style.css';
 
 OrgChart.templates.ana.plus = `<circle cx="15" cy="15" r="15" fill="#ffffff"></circle>
-    <text text-anchor="middle" style="font-size: 16px;cursor:pointer;" fill="#0A567A" x="15" y="22">{collapsed-children-count}</text>`;
+    <text text-anchor="middle" style="font-size: 16px;cursor:pointer;" fill="#0A567A" x="15" y="20">{collapsed-children-count}</text>`;
 
 OrgChart.templates.ana.minus = `<circle cx="15" cy="15" r="15" fill="#ffffff"></circle>
-<text text-anchor="middle" style="font-size: 16px;cursor:pointer;" fill="#0A567A" x="15" y="20">—</text>`;
+<text text-anchor="middle" style="font-size: 16px;cursor:pointer;" fill="#0A567A" x="15" y="18">—</text>`;
 
 OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
 OrgChart.templates.myTemplate.field_0 =
-	'<text data-width="213" data-text-overflow="multiline-3" style="font-size: 16px;" fill="#757575" x="12" y="60" text-anchor="left" class="field_0">{val}</text>';
+	'<text data-width="213" data-text-overflow="multiline-3" style="font-size: 18px;" fill="#757575" x="12" y="60" text-anchor="left" class="field_0">{val}</text>';
 OrgChart.templates.myTemplate.field_1 =
 	'<text data-width="160" data-text-overflow="ellipsis" style="font-size: 12px;" fill="#757575" x="12" y="30" text-anchor="left" class="field_1">{val}</text>';
 OrgChart.templates.myTemplate.field_2 =
-	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 12px;" fill="#757575" x="212" y="30" text-anchor="right" class="field_1">{val}</text>';
+	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 12px;" fill="#757575" x="222" y="30" text-anchor="right" class="field_1">{val}</text>';
 OrgChart.templates.myTemplate.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#5d87ff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
 
@@ -35,13 +35,13 @@ OrgChart.templates.process.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#108DC7" rx="5" ry="5"></rect>';
 
 OrgChart.templates.group.node =
-	'<rect x="0" y="0" height="{h}" width="{w}" fill="#E8F6FD" rx="5" ry="5"></rect>';
+	'<rect x="0" y="0" height="{h}" width="{w}" fill="#a2e3f5" rx="5" ry="5"></rect>';
 OrgChart.templates.group.field_0 =
 	'<text data-width="240" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#0A567A" x="20" y="32" text-anchor="center" class="field_disc">{val}</text>';
 
 OrgChart.templates.invisibleGroup.padding = [20, 0, 0, 0];
 
-export const Tree: FC<ITreeProps> = ({ onClickNode, nodes }) => {
+export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 	const divRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -53,6 +53,7 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, nodes }) => {
 				mouseScrool: OrgChart.action.zoom,
 				lazyLoading: false,
 				template: 'myTemplate',
+				layout: layout === 'mixed' ? OrgChart.mixed : OrgChart.normal,
 				scaleInitial: OrgChart.match.boundary,
 				enableSearch: false,
 				zoom: {

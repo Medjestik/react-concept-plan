@@ -1,0 +1,132 @@
+.container {
+	margin: 0;
+	width: 100%;
+}
+
+.title {
+	margin: 0 0 12px;
+	color: var(--main-black-color);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.15;
+	text-transform: uppercase;
+}
+
+.codes {
+	margin: 20px 0 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.code {
+	margin: 0;
+	padding: 16px 20px;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #E8F6FD;
+	border-radius: 12px;
+	transition: all .3s ease-in-out;
+}
+
+.code:hover {
+	cursor: pointer;
+	opacity: .7;
+}
+
+.code_active {
+	background-color: #15678D;
+}
+
+.code_active:hover {
+	cursor: default;
+	opacity: 1;
+}
+
+.code_text {
+	margin: 0;
+	color: #074A6A;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.15;
+	display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.code_active .code_text {
+	color: var(--main-white-color);
+}
+
+.list {
+	margin: 24px 0 0;
+	padding: 0;
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 24px;
+}
+
+.item {
+	margin: 0;
+	padding: 16px 20px;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #074A6A;
+	border-radius: 12px;
+	position: relative;
+	transition: all .3s ease-in-out;
+}
+
+.item:hover {
+	cursor: pointer;
+	opacity: .7;
+}
+
+.tag {
+	margin: 0;
+	color: #E8F6FD;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1.15;
+}
+
+.name {
+	margin: 24px 0 0;
+	max-width: 90%;
+	color: var(--main-white-color);
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1.15;
+}
+
+.caption {
+	margin: 24px 0 0;
+	max-width: 70%;
+	color: #A2E3F5;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1.15;
+}
+
+.count {
+	position: absolute;
+	bottom: -40px;
+	right: 12px;
+	color: rgba(255 255 255 / 20%);
+	font-size: 216px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	transition: all 0.3s ease-in-out;
+}

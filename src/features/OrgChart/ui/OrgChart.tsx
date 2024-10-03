@@ -9,7 +9,7 @@ import { TextTemplate } from '../../../features/TextTemplate/ui/TextTemplate';
 
 import { Tree } from './Tree';
 
-export const OrgChart: FC<IOrgChartProps> = ({ nodes }) => {
+export const OrgChart: FC<IOrgChartProps> = ({ nodes, layout = 'normal' }) => {
 	const [currentNode, setCurrentNode] = useState<any | null>(null);
 
 	const handleNodeClick = (node: unknown) => {
@@ -80,6 +80,7 @@ export const OrgChart: FC<IOrgChartProps> = ({ nodes }) => {
 		() => (
 			<Tree
 				onClickNode={handleNodeClick}
+				layout={layout}
 				nodes={nodes.map((elem) => ({
 					...elem,
 					tags: [elem.type],

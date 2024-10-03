@@ -1,0 +1,40 @@
+.container {
+	margin: 0;
+	width: 100%;
+}
+
+.title {
+	margin: 0 0 12px;
+	color: var(--main-black-color);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.15;
+	text-transform: uppercase;
+}
+
+.tableWrapper {
+  max-height: 800px; /* Задайте нужную высоту для контейнера таблицы */
+  overflow-y: auto; /* Позволяет вертикальную прокрутку */
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f1f1f1; /* Цвет фона для заголовков */
+  z-index: 1; /* Убедитесь, что заголовки видны поверх содержимого */
+}
+
+.table_text_bold {
+	font-weight: bold;
+}

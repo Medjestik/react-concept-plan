@@ -1,5 +1,7 @@
 import type { FC } from 'react';
 
+import { disciplineNodes } from '../mock/mock';
+
 import { DisciplineStructure } from '../../../features/DisciplineStructure/ui/DisciplineStructure';
 
 import styles from '../styles/style.module.css';
@@ -10,7 +12,7 @@ export const Discipline: FC = () => {
 			<h2 className={styles.title}>
 				Преобразование реконструкции деятельности в дисциплины УП
 			</h2>
-			<DisciplineStructure />
+			<DisciplineStructure nodes={disciplineNodes} />
 		</div>
 	);
 };

@@ -1,22 +1,35 @@
 import type { FC } from 'react';
 import type { IProduct } from '../../../pages/Product/types/types';
+import type { INode } from '../../OrgChart/types/types';
 
 import { useState } from 'react';
 
 import { products } from '../../../pages/Product/mock/mock';
-import { disciplineNodes } from '../../OrgChart/mock/mock';
 
 import { OrgChart } from '../../OrgChart/ui/OrgChart';
 
 import styles from '../styles/style.module.css';
 
-export const DisciplineStructure: FC = () => {
+interface IDisciplineStructure {
+	nodes: INodes[];
+	layout?: string;
+}
+
+interface INodes {
+	id: number;
+	nodes: INode[];
+}
+
+export const DisciplineStructure: FC<IDisciplineStructure> = ({
+	nodes,
+	layout,
+}) => {
 	const [currentProduct, setCurrentProduct] = useState<IProduct>(products[0]);
-	const [currentNodes, setCurrentNodes] = useState(disciplineNodes[0].nodes);
+	const [currentNodes, setCurrentNodes] = useState<INode[]>(nodes[0].nodes);
 
 	const handleSelectProduct = (item: IProduct) => {
 		setCurrentProduct(item);
-		setCurrentNodes(disciplineNodes[item.id - 1].nodes);
+		setCurrentNodes(nodes[item.id - 1].nodes);
 	};
 
 	return (
@@ -47,7 +60,7 @@ export const DisciplineStructure: FC = () => {
 					);
 				})}
 			</ul>
-			<OrgChart nodes={currentNodes} />
+			<OrgChart nodes={currentNodes} layout={layout} />
 		</>
 	);
 };

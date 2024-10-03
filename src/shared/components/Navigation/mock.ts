@@ -8,12 +8,6 @@ export const navLinks = [
 		path: EROUTESPATH.HOME,
 	},
 	{
-		text: 'Термины и определения',
-		type: 'term',
-		id: 2,
-		path: EROUTESPATH.TERM,
-	},
-	{
 		text: 'Анализ рынка труда',
 		type: 'analyze',
 		id: 3,
@@ -42,12 +36,6 @@ export const navLinks = [
 		type: 'discipline-main',
 		id: 7,
 		path: EROUTESPATH.DISCIPLINEMAIN,
-	},
-	{
-		text: 'ПК выпускника',
-		type: 'graduate',
-		id: 8,
-		path: EROUTESPATH.GRADUATE,
 	},
 	{
 		text: 'Учебный план',

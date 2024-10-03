@@ -9,7 +9,7 @@ export const Home: FC = () => {
 			<p className={styles.subtitle}>
 				основной профессиональной программы высшего образования
 			</p>
-			<p className={styles.subtitle}>
+			<p className={`${styles.subtitle} ${styles.subtitle_color}`}>
 				«Устойчивое развитие в транспортной отрасли»
 			</p>
 			<p className={styles.subtitle}>
