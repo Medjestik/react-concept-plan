@@ -39,15 +39,15 @@ export const MarketAnalyze: FC = () => {
 					<ChartBarTemplate
 						data={vacanciesGraphData}
 						title='Ведущие регионы по числу вакансий (в % и в абсолютных числах)'
-						mainColor='#5D87FF'
+						mainColor='#108DC7'
 					/>
 				</Card>
 				<Card>
 					<ChartBarTemplate
 						data={demandGraphData}
-						mainColor='#2ED573'
+						mainColor='#15678D'
 						title='Годовой прирост спроса на специалистов по регионам'
-						secondaryColor='#FF6B6B'
+						secondaryColor='#074A6A'
 					/>
 				</Card>
 			</div>

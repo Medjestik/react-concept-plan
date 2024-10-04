@@ -35,8 +35,38 @@
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;
-	background-color: var(--accent-blue-light-color);
+	background-color: #074A6A;
 	flex-shrink: 0;
+
+}
+
+.icon_type_environment {
+	background-image: url('../../../../shared/icons/indicator/environment.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.icon_type_social {
+	background-image: url('../../../../shared/icons/indicator/social.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.icon_type_quality {
+	background-image: url('../../../../shared/icons/indicator/quality.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
+}
+
+.icon_type_demand {
+	background-color: #108DC7;
+	background-image: url('../../../../shared/icons/indicator/demand.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 50%;
 }
 
 .text {

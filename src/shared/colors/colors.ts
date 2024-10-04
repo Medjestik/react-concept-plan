@@ -18,14 +18,11 @@ export const allColors = [
 ];
 
 export const accentColors = [
-	'#5D87FF',
-	'#FFCB53',
-	'#FF6B6B',
-	'#2ED573',
-	'#A96BFF',
-	'#FF9F43',
-	'#009688',
-	'#795548',
+	'#074A6A',
+	'#15678D',
+	'#108DC7',
+	'#8bd4f4',
+	'#A2E4F5',
 ];
 
 export const lightColors = [
