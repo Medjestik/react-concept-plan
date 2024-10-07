@@ -31,10 +31,13 @@ th, td {
 thead th {
   position: sticky;
   top: 0;
-  background-color: #f1f1f1; /* Цвет фона для заголовков */
-  z-index: 1; /* Убедитесь, что заголовки видны поверх содержимого */
+  background-color: #074A6A;
+	color: #ffffff;
+  z-index: 1;
 }
 
 .table_text_bold {
 	font-weight: bold;
+	background-color: #108DC7;
+	color: #ffffff;
 }

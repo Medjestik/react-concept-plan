@@ -35,9 +35,9 @@ OrgChart.templates.process.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#108DC7" rx="5" ry="5"></rect>';
 
 OrgChart.templates.group.node =
-	'<rect x="0" y="0" height="{h}" width="{w}" fill="#a2e3f5" rx="5" ry="5"></rect>';
+	'<rect x="0" y="0" height="{h}" width="{w}" fill="#fff" stroke="red" stroke-width="1" stroke-dasharray="15" rx="5" ry="5"></rect>';
 OrgChart.templates.group.field_0 =
-	'<text data-width="240" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#0A567A" x="20" y="32" text-anchor="center" class="field_disc">{val}</text>';
+	'<text data-width="240" data-text-overflow="multiline-2-ellipsis" style="font-size: 18px;" fill="#000" x="145" y="20" text-anchor="middle" class="field_disc">{val}</text>';
 
 OrgChart.templates.invisibleGroup.padding = [20, 0, 0, 0];
 

@@ -17,7 +17,8 @@
 .field_disc {
 	font-family: 'Roboto', 'Avenir', 'Helvetica', 'Arial', sans-serif;
 	font-weight: bold;
-	fill: #0A567A;
+	fill: red;
+	padding-bottom: 30px;
 }
 
 [data-l-id] path {

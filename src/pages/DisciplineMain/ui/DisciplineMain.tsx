@@ -13,22 +13,30 @@ import styles from '../styles/style.module.css';
 interface ICode {
 	id: number;
 	name: string;
+	shortName: string;
 }
 
 interface IDiscipline {
 	code: number;
 	name: string;
+	number: number;
 	areaName: string;
 	description: string;
 }
 
 export const DisciplineMain: FC = () => {
-	const [currentCode, setCurrentCode] = useState<ICode>(disciplineCodes[0]);
+	const [activeCodes, setActiveCodes] = useState<number[]>(
+		disciplineCodes.map((code) => code.id)
+	);
 	const [currentDiscipline, setCurrentDiscipline] =
 		useState<IDiscipline | null>(null);
 
 	const handleSelectCode = (code: ICode) => {
-		setCurrentCode(code);
+		if (activeCodes.includes(code.id)) {
+			setActiveCodes(activeCodes.filter((id) => id !== code.id));
+		} else {
+			setActiveCodes([...activeCodes, code.id]);
+		}
 	};
 
 	const openModal = (item: IDiscipline) => {
@@ -54,16 +62,19 @@ export const DisciplineMain: FC = () => {
 					<li
 						key={elem.id}
 						className={`${styles.code} ${
-							currentCode.id === elem.id ? styles.code_active : ''
+							activeCodes.includes(elem.id) ? styles.code_active : ''
 						}`}
 						onClick={() => handleSelectCode(elem)}>
-						<p className={styles.code_text}>{elem.name}</p>
+						<p className={styles.code_text}>
+							<span className={styles.code_text_bold}>{elem.shortName}</span>
+							{elem.name}
+						</p>
 					</li>
 				))}
 			</ul>
 			<ul className={styles.list}>
 				{disciplineMain
-					.filter((elem) => currentCode.id === elem.code)
+					.filter((elem) => activeCodes.includes(elem.code))
 					.map((item, i) => (
 						<li className={styles.item} key={i} onClick={() => openModal(item)}>
 							<span className={styles.tag}>
@@ -71,7 +82,7 @@ export const DisciplineMain: FC = () => {
 							</span>
 							<h4 className={styles.name}>{item.name}</h4>
 							<p className={styles.caption}>{item.areaName}</p>
-							<span className={styles.count}>{i + 1}</span>
+							<span className={styles.count}>{item.number}</span>
 						</li>
 					))}
 			</ul>

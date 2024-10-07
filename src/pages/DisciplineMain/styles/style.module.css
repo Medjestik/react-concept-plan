@@ -42,11 +42,6 @@
 	background-color: #15678D;
 }
 
-.code_active:hover {
-	cursor: default;
-	opacity: 1;
-}
-
 .code_text {
 	margin: 0;
 	color: #074A6A;
@@ -63,6 +58,10 @@
 
 .code_active .code_text {
 	color: var(--main-white-color);
+}
+
+.code_text_bold {
+	font-weight: bold;
 }
 
 .list {

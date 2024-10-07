@@ -1,0 +1,53 @@
+.container {
+	margin: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.author {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.img {
+	margin: 0 12px 0 0;
+	height: 30px;
+	object-fit: contain;
+	object-position: center;
+	flex-shrink: 0;
+}
+
+.description {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.name {
+	margin: 0;
+	font-style: normal;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.15;
+	color: #074A6A;
+}
+
+.job {
+	margin: 2px 0 0;
+	font-style: normal;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.15;
+	color: #15678D;
+}
+
+.text {
+	margin: 12px 0 0;
+	font-style: normal;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.15;
+	color: var(--main-black-color);
+}

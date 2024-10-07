@@ -28,7 +28,12 @@ export const Plan: FC = () => {
 					<tbody>
 						{educationPlan.map((elem, i) => (
 							<tr key={i}>
-								<td>{elem.number}</td>
+								<td
+									className={
+										elem.colspan !== null ? styles.table_text_bold : ''
+									}>
+									{elem.number}
+								</td>
 								<td
 									className={
 										elem.colspan !== null ? styles.table_text_bold : ''

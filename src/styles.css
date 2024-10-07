@@ -50,6 +50,10 @@
 	margin-top: 24px;
 }
 
+.row_mt_12 {
+	margin-top: 12px;
+}
+
 .row__column_1 {
 	grid-column: span 1;
 }
@@ -63,10 +67,14 @@
 }
 
 .row__title {
-	margin: 0 0 12px;
+	margin: 0;
 	font-style: normal;
 	font-size: 20px;
 	font-weight: bold;
 	line-height: 1.15;
 	color: var(--main-black-color);
+}
+
+.row__title_mt_40 {
+	margin-top: 40px;
 }
