@@ -10,6 +10,7 @@ import { Product } from '../pages/Product/ui/Product';
 import { Discipline } from '../pages/Discipline/ui/Discipline';
 import { DisciplineMain } from '../pages/DisciplineMain/ui/DisciplineMain';
 import { Plan } from '../pages/Plan/ui/Plan';
+import { Annotation } from '../pages/Annotation/ui/Annotation';
 
 import styles from './app.module.scss';
 
@@ -33,10 +34,7 @@ export const App = () => {
 							element={<DisciplineMain />}
 						/>
 						<Route path={EROUTESPATH.PLAN} element={<Plan />} />
-						<Route
-							path={EROUTESPATH.ANNOTATION}
-							element={<div>Аннотация</div>}
-						/>
+						<Route path={EROUTESPATH.ANNOTATION} element={<Annotation />} />
 					</Routes>
 				</div>
 			</main>

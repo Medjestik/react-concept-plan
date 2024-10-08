@@ -56,7 +56,7 @@ export const DisciplineMain: FC = () => {
 
 	return (
 		<div className={styles.container}>
-			<h2 className={styles.title}>Общеобразовательные дисцпилины</h2>
+			<h2 className={styles.title}>Общеобразовательные дисциплины</h2>
 			<ul className={styles.codes}>
 				{disciplineCodes.map((elem) => (
 					<li
