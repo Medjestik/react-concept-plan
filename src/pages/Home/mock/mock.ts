@@ -1,5 +1,6 @@
 import team1 from '../../../shared/icons/team/team1.jpg';
 import team2 from '../../../shared/icons/team/team2.jpg';
+import team3 from '../../../shared/icons/team/team3.jpg';
 import team4 from '../../../shared/icons/team/team4.jpg';
 import team5 from '../../../shared/icons/team/team5.jpg';
 import team6 from '../../../shared/icons/team/team6.jpg';
@@ -24,7 +25,7 @@ export const team = [
 		name: 'Батов Семен Тимофеевич',
 		job: 'Начальник Отдела охраны труда, промбезопасности и экологии Департамента по ядерной, радиационной, промышленной безопасности и экологии АО «ТВЭЛ»',
 		tag: 'Внешний эксперт',
-		img: '',
+		img: team3,
 	},
 	{
 		id: 4,

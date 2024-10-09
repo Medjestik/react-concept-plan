@@ -17,7 +17,7 @@
 .field_disc {
 	font-family: 'Roboto', 'Avenir', 'Helvetica', 'Arial', sans-serif;
 	font-weight: bold;
-	fill: red;
+	fill: #000000;
 	padding-bottom: 30px;
 }
 

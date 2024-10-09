@@ -3033,3 +3033,90 @@ export const disciplineNodes = [
 		],
 	},
 ];
+
+export const slinks = [
+	{
+		from: 'disc1',
+		to: 'disc2',
+	},
+	{
+		from: 'disc2',
+		to: 'disc3',
+	},
+	{
+		from: 'disc3',
+		to: 'disc4',
+	},
+	{
+		from: 'disc4',
+		to: 'disc5',
+	},
+	{
+		from: 'disc6',
+		to: 'disc7',
+	},
+	{
+		from: 'disc7',
+		to: 'disc8',
+	},
+	{
+		from: 'disc9',
+		to: 'disc10',
+	},
+	{
+		from: 'disc10',
+		to: 'disc11',
+	},
+	{
+		from: 'disc11',
+		to: 'disc12',
+	},
+	{
+		from: 'disc12',
+		to: 'disc13',
+	},
+	{
+		from: 'disc14',
+		to: 'disc15',
+	},
+	{
+		from: 'disc15',
+		to: 'disc16',
+	},
+	{
+		from: 'disc16',
+		to: 'disc17',
+	},
+	{
+		from: 'disc19',
+		to: 'disc20',
+	},
+	{
+		from: 'disc20',
+		to: 'disc21',
+	},
+	{
+		from: 'disc21',
+		to: 'disc22',
+	},
+	{
+		from: 'disc22',
+		to: 'disc23',
+	},
+	{
+		from: 'disc35',
+		to: 'disc36',
+	},
+	{
+		from: 'disc36',
+		to: 'disc37',
+	},
+	{
+		from: 'disc37',
+		to: 'disc38',
+	},
+	{
+		from: 'disc38',
+		to: 'disc39',
+	},
+];

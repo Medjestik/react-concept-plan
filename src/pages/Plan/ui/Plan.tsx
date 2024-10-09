@@ -14,15 +14,15 @@ export const Plan: FC = () => {
 						<tr>
 							<th>№</th>
 							<th>Наименование модуля и дисциплины</th>
-							<th>Шифр компетенции </th>
-							<th>1 семестр </th>
-							<th>2 семестр </th>
-							<th>3 семестр </th>
-							<th>4 семестр </th>
-							<th>5 семестр </th>
-							<th>6 семестр </th>
-							<th>7 семестр </th>
-							<th>8 семестр </th>
+							<th>Шифр&nbsp;компетенции </th>
+							<th>1&nbsp;сем.</th>
+							<th>2&nbsp;сем.</th>
+							<th>3&nbsp;сем.</th>
+							<th>4&nbsp;сем.</th>
+							<th>5&nbsp;сем.</th>
+							<th>6&nbsp;сем.</th>
+							<th>7&nbsp;сем.</th>
+							<th>8&nbsp;сем.</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -44,14 +44,30 @@ export const Plan: FC = () => {
 								{elem.colspan === null && (
 									<>
 										<td>{elem.competences}</td>
-										<td>{elem.sem1}</td>
-										<td>{elem.sem2}</td>
-										<td>{elem.sem3}</td>
-										<td>{elem.sem4}</td>
-										<td>{elem.sem5}</td>
-										<td>{elem.sem6}</td>
-										<td>{elem.sem7}</td>
-										<td>{elem.sem8}</td>
+										<td className={elem.sem1 ? styles.table_star : ''}>
+											{elem.sem1}
+										</td>
+										<td className={elem.sem2 ? styles.table_star : ''}>
+											{elem.sem2}
+										</td>
+										<td className={elem.sem3 ? styles.table_star : ''}>
+											{elem.sem3}
+										</td>
+										<td className={elem.sem4 ? styles.table_star : ''}>
+											{elem.sem4}
+										</td>
+										<td className={elem.sem5 ? styles.table_star : ''}>
+											{elem.sem5}
+										</td>
+										<td className={elem.sem6 ? styles.table_star : ''}>
+											{elem.sem6}
+										</td>
+										<td className={elem.sem7 ? styles.table_star : ''}>
+											{elem.sem7}
+										</td>
+										<td className={elem.sem8 ? styles.table_star : ''}>
+											{elem.sem8}
+										</td>
 									</>
 								)}
 							</tr>

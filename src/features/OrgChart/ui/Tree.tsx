@@ -4,6 +4,8 @@ import type { ITreeProps } from '../types/types';
 import { useEffect, useRef } from 'react';
 import OrgChart from '@balkangraph/orgchart.js';
 
+import { slinks } from '../../../pages/Discipline/mock/mock';
+
 import '../styles/style.css';
 
 OrgChart.templates.ana.plus = `<circle cx="15" cy="15" r="15" fill="#ffffff"></circle>
@@ -16,9 +18,9 @@ OrgChart.templates.myTemplate = Object.assign({}, OrgChart.templates.ana);
 OrgChart.templates.myTemplate.field_0 =
 	'<text data-width="213" data-text-overflow="multiline-3" style="font-size: 18px;" fill="#757575" x="12" y="60" text-anchor="left" class="field_0">{val}</text>';
 OrgChart.templates.myTemplate.field_1 =
-	'<text data-width="160" data-text-overflow="ellipsis" style="font-size: 12px;" fill="#757575" x="12" y="30" text-anchor="left" class="field_1">{val}</text>';
+	'<text data-width="160" data-text-overflow="ellipsis" style="font-size: 14px;" fill="#757575" x="12" y="30" text-anchor="left" class="field_1">{val}</text>';
 OrgChart.templates.myTemplate.field_2 =
-	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 12px;" fill="#757575" x="222" y="30" text-anchor="right" class="field_1">{val}</text>';
+	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 14px;" fill="#757575" x="222" y="30" text-anchor="right" class="field_1">{val}</text>';
 OrgChart.templates.myTemplate.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#5d87ff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
 
@@ -35,9 +37,9 @@ OrgChart.templates.process.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#108DC7" rx="5" ry="5"></rect>';
 
 OrgChart.templates.group.node =
-	'<rect x="0" y="0" height="{h}" width="{w}" fill="#fff" stroke="red" stroke-width="1" stroke-dasharray="15" rx="5" ry="5"></rect>';
+	'<rect x="0" y="0" height="{h}" width="{w}" fill="#ffffff" stroke="#000000" stroke-width="2" rx="5" ry="5"></rect>';
 OrgChart.templates.group.field_0 =
-	'<text data-width="240" data-text-overflow="multiline-2-ellipsis" style="font-size: 18px;" fill="#000" x="145" y="20" text-anchor="middle" class="field_disc">{val}</text>';
+	'<text data-width="280" data-text-overflow="multiline-2-ellipsis" style="font-size: 16px;" fill="#000" x="145" y="20" text-anchor="middle" class="field_disc">{val}</text>';
 
 OrgChart.templates.invisibleGroup.padding = [20, 0, 0, 0];
 
@@ -56,6 +58,7 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 				layout: layout === 'mixed' ? OrgChart.mixed : OrgChart.normal,
 				scaleInitial: OrgChart.match.boundary,
 				enableSearch: false,
+				slinks: slinks,
 				zoom: {
 					speed: 30,
 					smooth: 10,
