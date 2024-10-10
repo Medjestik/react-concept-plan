@@ -6,12 +6,19 @@
 
 .field_1 {
 	font-family: 'Roboto', 'Avenir', 'Helvetica', 'Arial', sans-serif;
-	fill: #ffffff;
+	font-weight: bold;
+	fill: #000000;
 }
 
 .field_2 {
 	font-family: 'Roboto', 'Avenir', 'Helvetica', 'Arial', sans-serif;
-	fill: #ffffff;
+	font-weight: bold;
+	fill: #000000;
+}
+
+.field_tag {
+	padding: 4px 12px;
+	background-color: red;
 }
 
 .field_disc {

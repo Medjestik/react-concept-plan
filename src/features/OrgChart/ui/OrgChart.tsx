@@ -21,6 +21,7 @@ export const OrgChart: FC<IOrgChartProps> = ({ nodes, layout = 'normal' }) => {
 	};
 
 	const renderTabs = (node: any) => {
+		console.log(node);
 		switch (node.type) {
 			case 'stage':
 				return [
