@@ -10,7 +10,7 @@ export const Discipline: FC = () => {
 	return (
 		<div className={styles.container}>
 			<h2 className={styles.title}>
-				Преобразование реконструкции деятельности в дисциплины УП
+				Преобразование реконструкции деятельности в дисциплины учебного плана
 			</h2>
 			<DisciplineStructure nodes={disciplineNodes} />
 		</div>

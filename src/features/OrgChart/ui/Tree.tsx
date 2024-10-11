@@ -31,6 +31,12 @@ OrgChart.templates.myTemplate.node =
 OrgChart.templates.product = Object.assign({}, OrgChart.templates.myTemplate);
 OrgChart.templates.product.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#074A6A" rx="5" ry="5"></rect>';
+OrgChart.templates.product.field_1 = `
+  <g>
+    <rect x="8" y="8" width="86" height="24" fill="#e5e5e5" rx="5" ry="5"></rect>
+    <text data-width="160" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="12" y="25" text-anchor="left" class="field_1 field_tag">{val}</text>
+  </g>
+`;
 
 OrgChart.templates.stage = Object.assign({}, OrgChart.templates.myTemplate);
 OrgChart.templates.stage.node =
@@ -51,9 +57,7 @@ OrgChart.templates.process.node =
 OrgChart.templates.group.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#ffffff" stroke="#000000" stroke-width="2" rx="5" ry="5"></rect>';
 OrgChart.templates.group.field_0 =
-	'<text data-width="280" data-text-overflow="multiline-2-ellipsis" style="font-size: 16px;" fill="#000" x="145" y="54" text-anchor="middle" class="field_disc">{val}</text>';
-OrgChart.templates.group.field_2 =
-	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="145" y="25" text-anchor="middle" class="field_1">Дисциплина</text>';
+	'<text data-width="260" data-text-overflow="multiline-3-ellipsis" style="font-size: 16px;" fill="#000" x="15" y="20" text-anchor="left" class="field_disc">{val}</text>';
 
 OrgChart.CLINK_CURVE = -1;
 
@@ -69,7 +73,7 @@ OrgChart.clinkTemplates.orange.link =
 	'<path marker-start="url(#dotOrange)" marker-end="url(#arrowOrange)" stroke="#F57C00" stroke-width="3" ' +
 	'fill="none" d="{d}" />';
 
-OrgChart.templates.group.padding = [80, 20, 20, 20];
+OrgChart.templates.group.padding = [68, 20, 20, 20];
 
 export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 	const divRef = useRef<HTMLDivElement>(null);
@@ -80,17 +84,18 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 			const chart = new OrgChart(divRef.current, {
 				nodes,
 				nodeMouseClick: OrgChart.action.none,
-				mouseScrool: OrgChart.action.zoom,
 				lazyLoading: false,
 				template: 'myTemplate',
 				layout: layout === 'mixed' ? OrgChart.mixed : OrgChart.normal,
-				scaleInitial: OrgChart.match.boundary,
+				scaleInitial: 0.7,
 				enableSearch: false,
+				collapse: { level: 1, allChildren: true },
 				clinks: slinks,
 				zoom: {
 					speed: 30,
 					smooth: 10,
 				},
+				anim: { func: OrgChart.anim.outPow, duration: 1000 },
 				nodeBinding: {
 					field_0: 'name',
 					field_1: 'title',
@@ -102,9 +107,6 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 						template: 'product',
 						subTreeConfig: {
 							orientation: OrgChart.orientation.bottom,
-							collapse: {
-								level: 1,
-							},
 						},
 					},
 					// eslint-disable-next-line prettier/prettier
@@ -112,9 +114,6 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 						template: 'group',
 						subTreeConfig: {
 							layout: OrgChart.mixed,
-							collapse: {
-								level: 1,
-							},
 						},
 					},
 					// eslint-disable-next-line prettier/prettier

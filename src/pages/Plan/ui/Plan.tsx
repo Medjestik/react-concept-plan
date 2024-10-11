@@ -7,22 +7,24 @@ import styles from '../styles/style.module.css';
 export const Plan: FC = () => {
 	return (
 		<div className={styles.container}>
-			<h2 className={styles.title}>Учнебный план</h2>
 			<div className={styles.tableWrapper}>
 				<table className={styles.table} border={1} width={1200} cellPadding={5}>
 					<thead>
 						<tr>
-							<th>№</th>
-							<th>Наименование модуля и дисциплины</th>
-							<th>Шифр&nbsp;компетенции </th>
-							<th>1&nbsp;сем.</th>
-							<th>2&nbsp;сем.</th>
-							<th>3&nbsp;сем.</th>
-							<th>4&nbsp;сем.</th>
-							<th>5&nbsp;сем.</th>
-							<th>6&nbsp;сем.</th>
-							<th>7&nbsp;сем.</th>
-							<th>8&nbsp;сем.</th>
+							<th rowSpan={2}>№</th>
+							<th rowSpan={2}>Наименование модуля и дисциплины</th>
+							<th rowSpan={2}>Шифр&nbsp;компетенции</th>
+							<th colSpan={8}>Семестры</th>
+						</tr>
+						<tr>
+							<th className={styles.semesterHeader}>1</th>
+							<th className={styles.semesterHeader}>2</th>
+							<th className={styles.semesterHeader}>3</th>
+							<th className={styles.semesterHeader}>4</th>
+							<th className={styles.semesterHeader}>5</th>
+							<th className={styles.semesterHeader}>6</th>
+							<th className={styles.semesterHeader}>7</th>
+							<th className={styles.semesterHeader}>8</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -43,31 +45,30 @@ export const Plan: FC = () => {
 								</td>
 								{elem.colspan === null && (
 									<>
-										<td>{elem.competences}</td>
-										<td className={elem.sem1 ? styles.table_star : ''}>
-											{elem.sem1}
+										<td
+											title={
+												elem.competences
+													? elem.competences
+															.map((competence) => competence.name)
+															.join(' ')
+													: ''
+											}>
+											{elem.competences &&
+												elem.competences.map((competence, index) => (
+													<span key={index}>
+														{competence.shortName}
+														{index < elem.competences.length - 1 && ', '}
+													</span>
+												))}
 										</td>
-										<td className={elem.sem2 ? styles.table_star : ''}>
-											{elem.sem2}
-										</td>
-										<td className={elem.sem3 ? styles.table_star : ''}>
-											{elem.sem3}
-										</td>
-										<td className={elem.sem4 ? styles.table_star : ''}>
-											{elem.sem4}
-										</td>
-										<td className={elem.sem5 ? styles.table_star : ''}>
-											{elem.sem5}
-										</td>
-										<td className={elem.sem6 ? styles.table_star : ''}>
-											{elem.sem6}
-										</td>
-										<td className={elem.sem7 ? styles.table_star : ''}>
-											{elem.sem7}
-										</td>
-										<td className={elem.sem8 ? styles.table_star : ''}>
-											{elem.sem8}
-										</td>
+										<td className={elem.sem1 ? styles.table_star : ''}></td>
+										<td className={elem.sem2 ? styles.table_star : ''}></td>
+										<td className={elem.sem3 ? styles.table_star : ''}></td>
+										<td className={elem.sem4 ? styles.table_star : ''}></td>
+										<td className={elem.sem5 ? styles.table_star : ''}></td>
+										<td className={elem.sem6 ? styles.table_star : ''}></td>
+										<td className={elem.sem7 ? styles.table_star : ''}></td>
+										<td className={elem.sem8 ? styles.table_star : ''}></td>
 									</>
 								)}
 							</tr>

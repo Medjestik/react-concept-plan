@@ -9,7 +9,6 @@ export const TextTemplate: FC<ITextTemplateProps> = ({ text }) => {
 	return (
 		<div className={styles.container}>
 			{paragraphs.map((paragraph, index) => (
-				// Рендер каждого абзаца в отдельном элементе p
 				<p key={index} className={styles.text}>
 					{paragraph}
 				</p>
