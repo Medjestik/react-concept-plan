@@ -10,7 +10,6 @@ export const Navigation: FC = () => {
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.section}>
-				<h3 className={styles.title}>Концептуальный план</h3>
 				<ul className={styles.list}>
 					{navLinks.map((item) => (
 						<li key={item.id} className={styles.item}>

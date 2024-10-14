@@ -121,6 +121,8 @@ export const TreeDiscipline: FC<ITreeProps> = ({
 					field_1: 'title',
 					field_2: 'position',
 				},
+				anim: { func: OrgChart.anim.outPow, duration: 1000 },
+				collapse: { level: 1, allChildren: true },
 				tags: {
 					// eslint-disable-next-line prettier/prettier
 					'product': {
