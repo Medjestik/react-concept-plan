@@ -3,6 +3,19 @@
 	width: 100%;
 }
 
+.spyrale {
+	width: 1280px;
+	height: 100%;
+	position: fixed;
+	bottom: -160px;
+	right: -120px;
+	background-image: url('../../../shared/icons/spirale.svg');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 0;
+}
+
 .title {
 	margin: 0 0 12px;
 	color: var(--main-black-color);
@@ -20,6 +33,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
+	z-index: 5;
 }
 
 .item {
@@ -31,6 +45,7 @@
 	border-radius: 12px;
 	position: relative;
 	transition: all 0.3s ease-in-out;
+	z-index: 5;
 }
 
 .item:hover {
@@ -39,15 +54,15 @@
 }
 
 .item_color_dark {
-	background-color: #074A6A;
+	background-color: var(--accent-blue-color);
 }
 
 .item_color_normal {
-	background-color: #15678D;
+	background-color: #435498;
 }
 
 .item_color_light {
-	background-color: #108DC7;
+	background-color: #EA0A2A;
 }
 
 .count {
@@ -69,7 +84,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #E8F6FD;
+	background-color: #ffffff;
 	border-radius: 50%;
 }
 
@@ -80,49 +95,49 @@
 }
 
 .icon_type_strategy {
-	background-image: url('../../../shared/icons/product/strategy.svg');
+	background-image: url('../../../shared/icons/product/strategy.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .icon_type_social {
-	background-image: url('../../../shared/icons/product/social.svg');
+	background-image: url('../../../shared/icons/product/social.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .icon_type_report {
-	background-image: url('../../../shared/icons/product/report.svg');
+	background-image: url('../../../shared/icons/product/report.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .icon_type_politic {
-	background-image: url('../../../shared/icons/product/politic.svg');
+	background-image: url('../../../shared/icons/product/politic.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .icon_type_energy {
-	background-image: url('../../../shared/icons/product/energy.svg');
+	background-image: url('../../../shared/icons/product/energy.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .icon_type_ecology {
-	background-image: url('../../../shared/icons/product/ecology.svg');
+	background-image: url('../../../shared/icons/product/ecology.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
 .icon_type_certificate {
-	background-image: url('../../../shared/icons/product/certificate.svg');
+	background-image: url('../../../shared/icons/product/certificate.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -140,7 +155,7 @@
 }
 
 .nsi {
-	color: #A2E3F5;
+	color: #ffffff;
 	font-size: 18px;
 	font-style: normal;
 	font-weight: normal;

@@ -7,11 +7,14 @@ import styles from '../styles/style.module.css';
 export const Home: FC = () => {
 	return (
 		<div className={styles.container}>
+			<div className={styles.background}></div>
+			<div className={styles.decore}></div>
 			<h1 className={styles.title}>КОНЦЕПТУАЛЬНЫЙ ПРОЕКТ</h1>
 			<p className={styles.subtitle}>
 				основной профессиональной программы высшего образования
 			</p>
-			<p className={`${styles.subtitle} ${styles.subtitle_color}`}>
+			<p
+				className={`${styles.subtitle} ${styles.subtitle_color} ${styles.subtitle_bold}`}>
 				«Устойчивое развитие в транспортной отрасли»
 			</p>
 			<p className={styles.subtitle}>
@@ -22,7 +25,14 @@ export const Home: FC = () => {
 			<ul className={styles.list}>
 				{team.map((elem) => (
 					<li className={styles.list_item} key={elem.id}>
-						<span className={styles.item_tag}>{elem.tag}</span>
+						<span
+							className={`${
+								elem.tag === 'Методист'
+									? styles.item_tag_red
+									: styles.item_tag_blue
+							}`}>
+							{elem.tag}
+						</span>
 						{elem.img ? (
 							<img
 								className={styles.item_img}

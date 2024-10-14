@@ -20,7 +20,7 @@
 	font-size: 18px;
 	line-height: 1.15;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 	color: var(--main-black-color);
 	transition: all 0.3s ease-in-out;
 }
@@ -35,13 +35,13 @@
 	padding: 4px 0;
 	box-sizing: border-box;
 	border: none;
-	border-bottom: 1px solid var(--accent-blue-color);
+	border-bottom: 2px solid var(--accent-blue-color);
 	outline: none;
 	background-color: inherit;
 	font-size: 18px;
 	line-height: 1.15;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 	color: var(--accent-blue-color);
 }
 
@@ -53,6 +53,6 @@
 	font-size: 18px;
 	line-height: 1.15;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: bold;
 	color: var(--accent-grey-color);
 }

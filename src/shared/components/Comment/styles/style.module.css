@@ -31,7 +31,7 @@
 	font-size: 16px;
 	font-weight: bold;
 	line-height: 1.15;
-	color: #074A6A;
+	color: var(--accent-blue-color);
 }
 
 .job {
@@ -40,7 +40,7 @@
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1.15;
-	color: #15678D;
+	color: #435498;
 }
 
 .text {

@@ -14,6 +14,7 @@ interface ICode {
 	id: number;
 	name: string;
 	shortName: string;
+	color: string;
 }
 
 interface IDiscipline {
@@ -22,6 +23,7 @@ interface IDiscipline {
 	number: number;
 	areaName: string;
 	description: string;
+	color: string;
 }
 
 export const DisciplineMain: FC = () => {
@@ -56,13 +58,14 @@ export const DisciplineMain: FC = () => {
 
 	return (
 		<div className={styles.container}>
+			<div className={styles.spyrale}></div>
 			<h2 className={styles.title}>Общеобразовательные дисциплины</h2>
 			<ul className={styles.codes}>
 				{disciplineCodes.map((elem) => (
 					<li
 						key={elem.id}
-						className={`${styles.code} ${
-							activeCodes.includes(elem.id) ? styles.code_active : ''
+						className={`${styles.code} ${styles[`code_${elem.color}`]} ${
+							activeCodes.includes(elem.id) ? '' : styles.code_disabled
 						}`}
 						onClick={() => handleSelectCode(elem)}>
 						<p className={styles.code_text}>
@@ -76,7 +79,10 @@ export const DisciplineMain: FC = () => {
 				{disciplineMain
 					.filter((elem) => activeCodes.includes(elem.code))
 					.map((item, i) => (
-						<li className={styles.item} key={i} onClick={() => openModal(item)}>
+						<li
+							className={`${styles.item} ${styles[`item_${item.color}`]}`}
+							key={i}
+							onClick={() => openModal(item)}>
 							<span className={styles.tag}>
 								Общепрофессиональная дисциплина
 							</span>

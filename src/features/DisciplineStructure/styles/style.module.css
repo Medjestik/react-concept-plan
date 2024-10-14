@@ -15,6 +15,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	gap: 16px;
+	z-index: 5;
 }
 
 .item {
@@ -25,21 +26,22 @@
 	background-color: var(--background-color);
 	position: relative;
 	transition: all 0.3s ease;
+	z-index: 5;
 }
 
 .item:hover {
 	cursor: pointer;
-	background-color: #a2e3f5;
+	background-color: #435498;
 }
 
 .item_active {
 	grid-column: span 2;
-	background-color: #a2e3f5;
+	background-color: #041A76;
 }
 
 .item_active:hover {
 	cursor: default;
-	background-color: #a2e3f5;
+	background-color: #041A76;
 }
 
 .tag {
@@ -53,7 +55,7 @@
 }
 
 .item_active .tag {
-	color: #0a567a;
+	color: #ffffff;
 }
 
 .name {
@@ -72,7 +74,7 @@
 }
 
 .item_active .name {
-	color: #0a567a;
+	color: #ffffff;
 }
 
 .count {

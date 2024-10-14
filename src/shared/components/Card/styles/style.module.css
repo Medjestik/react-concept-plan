@@ -6,8 +6,10 @@
 	display: flex;
 	flex-direction: column;
 	border-radius: 12px;
+	background-color: #ffffff;
 	box-shadow: rgba(145 158 171 / 30%) 0 0 2px 0,
 		rgba(145 158 171 / 12%) 0 12px 24px -4px;
+	z-index: 3;
 }
 
 .title {

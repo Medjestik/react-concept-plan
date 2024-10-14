@@ -49,8 +49,11 @@ export const Plan: FC = () => {
 											title={
 												elem.competences
 													? elem.competences
-															.map((competence) => competence.name)
-															.join(' ')
+															.map(
+																(competence) =>
+																	`${competence.shortName}: ${competence.name}`
+															)
+															.join(', ')
 													: ''
 											}>
 											{elem.competences &&

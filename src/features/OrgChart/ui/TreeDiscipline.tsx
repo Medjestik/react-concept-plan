@@ -26,40 +26,46 @@ OrgChart.templates.myTemplate.field_2 =
 OrgChart.templates.myTemplate.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#5d87ff" stroke-width="1" stroke="#aeaeae" rx="5" ry="5"></rect>';
 
-OrgChart.templates.product = Object.assign({}, OrgChart.templates.myTemplate);
-OrgChart.templates.product.node =
+OrgChart.templates.productDisc = Object.assign(
+	{},
+	OrgChart.templates.myTemplate
+);
+OrgChart.templates.productDisc.node =
 	'<rect x="0" y="0" height="{h}" width="{w}" fill="#041A76" rx="5" ry="5"></rect>';
-OrgChart.templates.product.field_1 = `
+OrgChart.templates.productDisc.field_1 = `
   <g>
     <rect x="8" y="8" width="86" height="24" fill="#ffffff" rx="5" ry="5"></rect>
     <text data-width="160" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="12" y="25" text-anchor="left" class="field_tag_product">{val}</text>
   </g>
 `;
 
-OrgChart.templates.stage = Object.assign({}, OrgChart.templates.myTemplate);
-OrgChart.templates.stage.node =
-	'<rect x="0" y="0" height="{h}" width="{w}" fill="#435498" rx="5" ry="5"></rect>';
-OrgChart.templates.stage.field_1 = `
+OrgChart.templates.stageDisc = Object.assign({}, OrgChart.templates.myTemplate);
+OrgChart.templates.stageDisc.node =
+	'<rect x="0" y="0" height="{h}" width="{w}" fill="#EA0A2A" rx="5" ry="5"></rect>';
+OrgChart.templates.stageDisc.field_1 = `
   <g>
     <rect x="8" y="8" width="60" height="24" fill="#ffffff" rx="5" ry="5"></rect>
-    <text data-width="160" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="12" y="25" text-anchor="left" class="field_tag_stage">{val}</text>
+    <text data-width="160" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="12" y="25" text-anchor="left" class="field_tag_stage-disc">{val}</text>
   </g>
 `;
-OrgChart.templates.stage.field_2 =
-	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="54" y="25" text-anchor="left" class="field_tag_stage">{val}</text>';
+OrgChart.templates.stageDisc.field_2 =
+	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#757575" x="54" y="25" text-anchor="left" class="field_tag_stage-disc">{val}</text>';
 
-OrgChart.templates.process = Object.assign({}, OrgChart.templates.myTemplate);
-OrgChart.templates.process.node =
-	'<rect x="0" y="0" height="{h}" width="{w}" fill="#B3BAD6" rx="5" ry="5"></rect>';
-OrgChart.templates.process.field_0 =
+OrgChart.templates.processDisc = Object.assign(
+	{},
+	OrgChart.templates.myTemplate
+);
+OrgChart.templates.processDisc.node =
+	'<rect x="0" y="0" height="{h}" width="{w}" fill="#ffffff" rx="5" ry="5"></rect>';
+OrgChart.templates.processDisc.field_0 =
 	'<text data-width="213" data-text-overflow="multiline-3" style="font-size: 18px;" fill="#041A76" x="12" y="60" text-anchor="left" class="field_0_process">{val}</text>';
-OrgChart.templates.process.field_1 = `
+OrgChart.templates.processDisc.field_1 = `
   <g>
     <rect x="8" y="8" width="100" height="24" fill="#041A76" rx="5" ry="5"></rect>
     <text data-width="160" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#ffffff" x="12" y="25" text-anchor="left" class="field_tag_process">{val}</text>
   </g>
 `;
-OrgChart.templates.process.field_2 =
+OrgChart.templates.processDisc.field_2 =
 	'<text data-width="54" data-text-overflow="ellipsis" style="font-size: 16px;" fill="#ffffff" x="80" y="25" text-anchor="left" class="field_tag_process">{val}</text>';
 
 OrgChart.templates.group.node =
@@ -88,7 +94,11 @@ OrgChart.CLINK_CURVE = -1;
 
 OrgChart.templates.group.padding = [72, 20, 20, 20];
 
-export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
+export const TreeDiscipline: FC<ITreeProps> = ({
+	onClickNode,
+	layout,
+	nodes,
+}) => {
 	const divRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
@@ -114,7 +124,7 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 				tags: {
 					// eslint-disable-next-line prettier/prettier
 					'product': {
-						template: 'product',
+						template: 'productDisc',
 						subTreeConfig: {
 							orientation: OrgChart.orientation.bottom,
 						},
@@ -128,11 +138,11 @@ export const Tree: FC<ITreeProps> = ({ onClickNode, layout, nodes }) => {
 					},
 					// eslint-disable-next-line prettier/prettier
 					'stage': {
-						template: 'stage',
+						template: 'stageDisc',
 					},
 					// eslint-disable-next-line prettier/prettier
 					'process': {
-						template: 'process',
+						template: 'processDisc',
 					},
 				},
 			});

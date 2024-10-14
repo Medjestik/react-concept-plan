@@ -55,6 +55,7 @@ const commentData3 = {
 export const MarketAnalyze: FC = () => {
 	return (
 		<div className={styles.container}>
+			<div className={styles.spyrale}></div>
 			<div className='row'>
 				<div className='row__column_3'>
 					<IndicatorList
@@ -77,15 +78,15 @@ export const MarketAnalyze: FC = () => {
 					<ChartBarTemplate
 						data={vacanciesGraphData}
 						title='Ведущие регионы по числу вакансий (в % и в абсолютных числах)'
-						mainColor='#108DC7'
+						mainColor='#435498'
 					/>
 				</Card>
 				<Card>
 					<ChartBarTemplate
 						data={demandGraphData}
-						mainColor='#15678D'
 						title='Годовой прирост спроса на специалистов по регионам'
-						secondaryColor='#074A6A'
+						mainColor='#041A76'
+						secondaryColor='#EA0A2A'
 					/>
 				</Card>
 			</div>

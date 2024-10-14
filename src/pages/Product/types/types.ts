@@ -5,6 +5,7 @@ export interface IProduct {
 	icon: string;
 	nsi: number[];
 	stages?: IStage[];
+	description: string;
 }
 
 export interface IStage {

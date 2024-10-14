@@ -35,7 +35,7 @@
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;
-	background-color: #074A6A;
+	background-color: #EA0A2A;
 	flex-shrink: 0;
 
 }
@@ -62,7 +62,7 @@
 }
 
 .icon_type_demand {
-	background-color: #108DC7;
+	background-color: var(--accent-blue-color);
 	background-image: url('../../../../shared/icons/indicator/demand.svg');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -73,7 +73,7 @@
 	margin: 0;
 	font-style: normal;
 	font-size: 14px;
-	font-weight: normal;
+	font-weight: bold;
 	line-height: 1.15;
 	color: var(--main-black-color);
 }

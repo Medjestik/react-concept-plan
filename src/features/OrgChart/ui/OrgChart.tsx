@@ -8,8 +8,13 @@ import { Tabs } from '../../../shared/components/Tabs/ui/Tabs';
 import { TextTemplate } from '../../../features/TextTemplate/ui/TextTemplate';
 
 import { Tree } from './Tree';
+import { TreeDiscipline } from './TreeDiscipline';
 
-export const OrgChart: FC<IOrgChartProps> = ({ nodes, layout = 'normal' }) => {
+export const OrgChart: FC<IOrgChartProps> = ({
+	nodes,
+	layout = 'normal',
+	type = 'default',
+}) => {
 	const [currentNode, setCurrentNode] = useState<any | null>(null);
 
 	const handleNodeClick = (node: unknown) => {
@@ -21,7 +26,6 @@ export const OrgChart: FC<IOrgChartProps> = ({ nodes, layout = 'normal' }) => {
 	};
 
 	const renderTabs = (node: any) => {
-		console.log(node);
 		switch (node.type) {
 			case 'stage':
 				return [
@@ -78,21 +82,32 @@ export const OrgChart: FC<IOrgChartProps> = ({ nodes, layout = 'normal' }) => {
 	};
 
 	const memoizedTree = useMemo(
-		() => (
-			<Tree
-				onClickNode={handleNodeClick}
-				layout={layout}
-				nodes={nodes.map((elem) => ({
-					...elem,
-					tags: [elem.type],
-				}))}
-			/>
-		),
+		() =>
+			type === 'default' ? (
+				<Tree
+					onClickNode={handleNodeClick}
+					layout={layout}
+					nodes={nodes.map((elem) => ({
+						...elem,
+						tags: [elem.type],
+					}))}
+				/>
+			) : (
+				<TreeDiscipline
+					onClickNode={handleNodeClick}
+					layout={layout}
+					nodes={nodes.map((elem) => ({
+						...elem,
+						tags: [elem.type],
+					}))}
+				/>
+			),
 		[nodes]
 	);
 
 	return (
 		<div className='org-chart'>
+			<div className='chart-spyrale'></div>
 			<div className='tree-container' style={{ height: '100%' }}>
 				{memoizedTree}
 			</div>

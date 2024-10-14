@@ -9,7 +9,6 @@ export const Menu: FC = () => {
 		<div className={styles.menu}>
 			<div className={styles.header}>
 				<div className={styles.header__logo}></div>
-				<span className={styles.header__text}>Конструктор ВО</span>
 			</div>
 			<Navigation />
 		</div>

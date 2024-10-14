@@ -7,7 +7,7 @@
 	--main-white-color: #ffffff;
 	--main-black-color: #262626;
 	--accent-grey-color: #a6a6a6;
-	--accent-blue-color: #15678D;
+	--accent-blue-color: #041A76;
 	--accent-blue-light-color: #E8F6FD;
 	--accent-yellow-color: #ffcb53;
 	--accent-yellow-light-color: #fef5e5;
@@ -44,6 +44,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 24px;
+	z-index: 3;
 }
 
 .row_mt_24 {

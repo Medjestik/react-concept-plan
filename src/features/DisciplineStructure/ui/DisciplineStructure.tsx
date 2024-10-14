@@ -60,7 +60,11 @@ export const DisciplineStructure: FC<IDisciplineStructure> = ({
 					);
 				})}
 			</ul>
-			<OrgChart nodes={currentNodes} layout={layout} />
+			<OrgChart
+				nodes={currentNodes}
+				layout={layout}
+				type={layout && layout === 'mixed' ? 'default' : 'discipline'}
+			/>
 		</>
 	);
 };

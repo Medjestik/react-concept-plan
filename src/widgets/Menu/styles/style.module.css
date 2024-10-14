@@ -9,6 +9,7 @@
 	display: flex;
 	flex-direction: column;
 	border-right: 1px solid var(--main-grey-color);
+	z-index: 10;
 }
 
 .header {
@@ -21,11 +22,11 @@
 }
 
 .header__logo {
-	margin: 0 12px 0 0;
-	width: 40px;
+	margin: 0;
+	width: 100%;
 	height: 40px;
-	background-image: url('../../../shared/icons/logo.png');
-	background-position: center;
+	background-image: url('../../../shared/icons/logo-transport.svg');
+	background-position: left;
 	background-repeat: no-repeat;
 	background-size: contain;
 }

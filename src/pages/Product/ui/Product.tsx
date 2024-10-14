@@ -8,6 +8,7 @@ import { products, nsiList } from '../mock/mock';
 import { Modal } from '../../../shared/components/Modal/ui/Modal';
 import { Tabs } from '../../../shared/components/Tabs/ui/Tabs';
 import { ContentTemplate } from '../../../features/ContentTemplate/ui/ContentTemplate';
+import { TextTemplate } from '../../../features/TextTemplate/ui/TextTemplate';
 
 import styles from '../styles/style.module.css';
 
@@ -38,14 +39,14 @@ export const Product: FC = () => {
 		},
 		{
 			label: 'Описание продукта',
-			content: <></>,
-			disabled: true,
+			content: <TextTemplate text={currentProduct?.description || ''} />,
 		},
 	];
 
 	return (
 		<>
 			<div className={styles.container}>
+				<div className={styles.spyrale}></div>
 				<h2 className={styles.title}>
 					Продукты, к созданию которых готовятся выпускники образовательной
 					программы

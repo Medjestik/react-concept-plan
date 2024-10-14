@@ -22,4 +22,5 @@ export interface ITreeProps {
 export interface IOrgChartProps {
 	nodes: INode[];
 	layout?: string;
+	type?: 'default' | 'discipline';
 }
