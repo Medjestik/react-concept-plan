@@ -33,7 +33,7 @@
 	list-style-type: none;
 	width: 100%;
 	display: flex;
-	align-items: center;
+	align-items: stretch;
 	gap: 24px;
 }
 
@@ -75,11 +75,6 @@
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 1.15;
-	display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .code_disabled .code_text {
