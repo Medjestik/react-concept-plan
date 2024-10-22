@@ -45,6 +45,11 @@ thead th {
   background-color: #041A76;
   color: #ffffff;
   z-index: 1;
+	text-align: center;
+}
+
+.headerAlign {
+	text-align: center;
 }
 
 .table_text_bold {

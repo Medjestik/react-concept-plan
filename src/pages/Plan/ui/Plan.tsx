@@ -11,10 +11,14 @@ export const Plan: FC = () => {
 				<table className={styles.table} border={1} width={1200} cellPadding={5}>
 					<thead>
 						<tr>
-							<th rowSpan={2}>№</th>
+							<th rowSpan={2}>
+								№ <br></br> п/п
+							</th>
 							<th rowSpan={2}>Наименование модуля и дисциплины</th>
 							<th rowSpan={2}>Шифр&nbsp;компетенции</th>
-							<th colSpan={8}>Семестры</th>
+							<th className={styles.headerAlign} colSpan={8}>
+								Семестры
+							</th>
 						</tr>
 						<tr>
 							<th className={styles.semesterHeader}>1</th>
