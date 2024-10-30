@@ -20,13 +20,13 @@
 }
 
 .description {
-	margin: 80px auto;
+	margin: auto;
 	width: 56vw;
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
 	box-sizing: border-box;
-	background-color: #ffffff;
+	background-color: rgba(255 255 255 / 85%);
 	border-radius: 22px;
 	z-index: 10;
 }
@@ -43,7 +43,7 @@
 }
 
 .subtitle {
-	margin: 8px 0 0;
+	margin: 12px 0 0;
 	font-size: 24px;
 	font-style: normal;
 	font-weight: normal;
@@ -54,7 +54,7 @@
 }
 
 .subtitle_color {
-	margin: 44px 0 0;
+	margin: 32px 0 0;
 	font-size: 32px;
 	color: #EA0A2A;
 }
