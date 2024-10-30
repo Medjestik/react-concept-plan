@@ -1,5 +1,6 @@
 export enum EROUTESPATH {
 	HOME = '/',
+	TEAM = '/team',
 	TERM = '/term',
 	ANALYZE = '/analyze',
 	PRODUCT = '/product',

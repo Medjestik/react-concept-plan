@@ -127,16 +127,16 @@
 	background-image: url('../../../../shared/icons/navigation/reconstruction-color.png');
 }
 
-.item__icon_type_graduate {
-	background-image: url('../../../../shared/icons/navigation/graduate-black.png');
+.item__icon_type_team {
+	background-image: url('../../../../shared/icons/navigation/team-black.png');
 }
 
-.item__link_active .item__icon_type_graduate {
-	background-image: url('../../../../shared/icons/navigation/graduate-white.png');
+.item__link_active .item__icon_type_team {
+	background-image: url('../../../../shared/icons/navigation/team-white.png');
 }
 
-.item__link:hover .item__icon_type_graduate {
-	background-image: url('../../../../shared/icons/navigation/graduate-color.png');
+.item__link:hover .item__icon_type_team {
+	background-image: url('../../../../shared/icons/navigation/team-color.png');
 }
 
 .item__icon_type_plan {

@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { EROUTESPATH } from '../shared/components/Navigation/types/types';
 
 import { Menu } from '../widgets/Menu/ui/Menu';
+import { Team } from '../pages/Team/ui/Team';
 import { Home } from '../pages/Home/ui/Home';
 import { Reconstruction } from '../pages/Reconstruction/ui/Reconstruction';
 import { MarketAnalyze } from '../pages/MarketAnalyze/ui/MarketAnalyze';
@@ -22,6 +23,7 @@ export const App = () => {
 				<div className={styles.container}>
 					<Routes>
 						<Route path={EROUTESPATH.HOME} element={<Home />} />
+						<Route path={EROUTESPATH.TEAM} element={<Team />} />
 						<Route path={EROUTESPATH.ANALYZE} element={<MarketAnalyze />} />
 						<Route path={EROUTESPATH.PRODUCT} element={<Product />} />
 						<Route

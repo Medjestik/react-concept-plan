@@ -8,6 +8,12 @@ export const navLinks = [
 		path: EROUTESPATH.HOME,
 	},
 	{
+		text: 'Команда проектирования',
+		type: 'team',
+		id: 2,
+		path: EROUTESPATH.TEAM,
+	},
+	{
 		text: 'Анализ рынка труда',
 		type: 'analyze',
 		id: 3,
