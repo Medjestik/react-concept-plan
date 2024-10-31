@@ -5,7 +5,6 @@ import { Card } from '../../../shared/components/Card/ui/Card';
 import { ChartBarTemplate } from '../../../features/ChartsTemplate/ui/ChartBarTemplate';
 import { ChartPieTemplate } from '../../../features/ChartsTemplate/ui/ChartPieTemplate';
 import { Source } from '../../../shared/components/Source/ui/Source';
-import { Comment } from '../../../shared/components/Comment/ui/Comment';
 
 import {
 	experienceChartData,
@@ -19,11 +18,10 @@ import {
 
 import source1 from '../../../shared/icons/source/source1.svg';
 import source2 from '../../../shared/icons/source/source2.svg';
-import comment1 from '../../../shared/icons/comment/comment1.svg';
-import comment2 from '../../../shared/icons/comment/comment2.svg';
-import comment3 from '../../../shared/icons/comment/comment3.svg';
 
 import styles from '../styles/style.module.css';
+
+/*
 
 const commentData1 = {
 	author: {
@@ -51,6 +49,8 @@ const commentData3 = {
 	},
 	text: 'Образовательные программы должны отвечать как краткосрочным запросам бизнеса, так и долгосрочным стратегическим целям устойчивого развития.',
 };
+
+*/
 
 export const MarketAnalyze: FC = () => {
 	return (
@@ -113,17 +113,6 @@ export const MarketAnalyze: FC = () => {
 						title='График работы'
 						graphHeight={220}
 					/>
-				</Card>
-			</div>
-			<div className='row row_mt_12'>
-				<Card>
-					<Comment author={commentData1.author} text={commentData1.text} />
-				</Card>
-				<Card>
-					<Comment author={commentData2.author} text={commentData2.text} />
-				</Card>
-				<Card>
-					<Comment author={commentData3.author} text={commentData3.text} />
 				</Card>
 			</div>
 			<h2 className='row__title row__title_mt_40'>Ссылки на источники</h2>
