@@ -126,8 +126,8 @@ export const MarketAnalyze: FC = () => {
 				</Card>
 				<Card>
 					<Source
-						text='Что сдерживает рынок труда специалистов по устойчивому развитию'
-						url='https://www.b-soc.ru/io/speczialisty-vyyavili-razryv-mezhdu-sprosom-kompanij-na-kvalificzirovannye-kadry-dlya-ustojchivogo-razvitiya-i-rogrammami-po-obrazovaniyu-v-oblasti-esg-predvaritelnye-rezultaty-issledovaniya/'
+						text='Образование в области устойчивого развития требует системного подхода'
+						url='https://conf.hse.ru/2023/news/828246600.html'
 						icon={source2}
 					/>
 				</Card>
